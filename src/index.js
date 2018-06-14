@@ -1,7 +1,7 @@
 import _ from 'lodash';
-import './style.css';
-import Icon from './naruto.png';
-import Data from './data.xml';
+import './components/test-source/style.css';
+import Icon from './components/test-source/naruto.png';
+import Data from './components/test-source/data.xml';
 
 function component() {
     var element = document.createElement('div');
