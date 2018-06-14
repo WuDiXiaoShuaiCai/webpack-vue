@@ -19,7 +19,7 @@ function component() {
    btn.onclick = printMe;
 
    element.appendChild(myIcon);
-   element.appendChild(btn);
+   element.appendChild(btn); 
 
 
    console.log(Data);
