@@ -1,9 +1,18 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    entry: './src/index.js',
+    entry: {
+        app: './src/index.js',
+        print: './src/print.js'
+    },
+    plugins: [
+        new HtmlWebpackPlugin({ //根据入口文件与title自动生成index.html，对已有html进行覆盖
+            title: 'test'
+        })
+    ],
     output: {
-        filename: 'bundle.js',
+        filename: '[name].bundle.js',
         path: path.resolve(__dirname, 'dist')
     },
     module: {
