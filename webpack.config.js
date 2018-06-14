@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -7,6 +8,7 @@ module.exports = {
         print: './src/print.js'
     },
     plugins: [
+        new CleanWebpackPlugin(['dist']),  //构建之前先清空
         new HtmlWebpackPlugin({ //根据入口文件与title自动生成index.html，对已有html进行覆盖
             title: 'test'
         })
