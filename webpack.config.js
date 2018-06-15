@@ -7,6 +7,12 @@ module.exports = {
     entry: {
         app: './src/index.js'
     },
+    output: {
+        filename: '[name].bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        publicPath: '/'
+    },
+    mode: 'production', //压缩输出，内部调用UglifyJsPlugin   或者   命令行使用--optimize-minimize标记
     devtool: 'inline-source-map',   //source map追踪错误
     devServer: {
         contentBase: './dist',
@@ -20,11 +26,6 @@ module.exports = {
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
-    output: {
-        filename: '[name].bundle.js',
-        path: path.resolve(__dirname, 'dist'),
-        publicPath: '/'
-    },
     module: {
         rules: [
             {
