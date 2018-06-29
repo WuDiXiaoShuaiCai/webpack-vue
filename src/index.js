@@ -20,8 +20,8 @@ function component() {
     //添加css
     element.classList.add('hello');
     // 将图像添加到我们现有的 div。
-   var myIcon = new Image();
-   myIcon.src = Icon;
+//    var myIcon = new Image();
+//    myIcon.src = Icon;
 
    element.innerHTML = [
        'Hello webpack!',
@@ -32,7 +32,7 @@ function component() {
    btn.innerHTML = 'Click me and check the console!';
    btn.onclick = printMe;
 
-   element.appendChild(myIcon);
+//    element.appendChild(myIcon);
    element.appendChild(btn); 
 
 

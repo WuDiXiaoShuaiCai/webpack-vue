@@ -5,6 +5,7 @@ const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
     devtool: 'source-map',
+    mode: 'production', //压缩输出，内部调用UglifyJsPlugin   或者   命令行使用--optimize-minimize标记
     plugins: [
         new UglifyJSPlugin({
             sourceMap: true
